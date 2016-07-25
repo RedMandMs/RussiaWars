@@ -1,6 +1,11 @@
 package com.thebestleticompany.russianwars.domain.user;
 
+import com.thebestleticompany.russianwars.domain.player.Player;
+
 import javax.persistence.*;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by ManUnited on 15.07.2016.
@@ -8,7 +13,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "province")
+@Table(name = "user_")
 public class User {
 
     @Id
@@ -19,7 +24,10 @@ public class User {
     private String login;
 
     @Column(name = "password", nullable = false)
-    private String password;
+    private String passwordHash;
+
+    @OneToOne
+    private Player player;
 
     public String getLogin() {
         return login;
@@ -29,12 +37,12 @@ public class User {
         this.login = login;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPasswordHash() {
+        return passwordHash;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPasswordHash(String password) {
+        this.passwordHash = password;
     }
 
     public Long getId() {
@@ -43,5 +51,13 @@ public class User {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    // ультра костыль с админом
+    public Set<Role> getRoles() {
+        if (player == null) {
+            return Collections.singleton(Role.ADMIN);
+        }
+        return new HashSet<>();
     }
 }
