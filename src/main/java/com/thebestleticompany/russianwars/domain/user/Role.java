@@ -1,5 +1,6 @@
 package com.thebestleticompany.russianwars.domain.user;
 
+
 import com.google.gwt.thirdparty.guava.common.collect.Sets;
 
 import java.util.Arrays;

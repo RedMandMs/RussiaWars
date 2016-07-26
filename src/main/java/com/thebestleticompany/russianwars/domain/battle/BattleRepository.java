@@ -1,6 +1,5 @@
 package com.thebestleticompany.russianwars.domain.battle;
 
-import com.thebestleticompany.russianwars.domain.province.Province;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

@@ -21,15 +21,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoginSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
 
-    @Autowired
-    private SessionRegistry sessionRegistry;
-
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request,
         HttpServletResponse response, Authentication authentication)
         throws IOException, ServletException {
-        sessionRegistry.registerNewSession(request.getSession().getId(),
-            authentication.getPrincipal());
         super.onAuthenticationSuccess(request, response, authentication);
     }
 }

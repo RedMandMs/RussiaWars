@@ -2,6 +2,7 @@ package com.thebestleticompany.russianwars.settings.secure;
 
 import com.thebestleticompany.russianwars.settings.secure.authentification.LoginSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -29,6 +30,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
+@ComponentScan("com.thebestleticompany.russianwars")
 public class SecureConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired

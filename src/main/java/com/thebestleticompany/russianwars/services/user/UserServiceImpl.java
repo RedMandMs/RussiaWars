@@ -12,10 +12,39 @@ import java.util.Optional;
  * @author Vilgodskiy Sergey on 25.07.2016.
  * @since 0.2.20
  */
-@Service("userService")
+@Service
 public class UserServiceImpl implements UserService {
+    @Override
+    public Optional<User> findUserById(long id) {
+        return null;
+    }
 
-    @Autowired
+    @Override
+    public User create(User user) {
+        return null;
+    }
+
+    @Override
+    public User edit(User user) {
+        return null;
+    }
+
+    @Override
+    public void delete(Long id) {
+
+    }
+
+    @Override
+    public Optional<User> getUserByLogonName(String logonName) {
+        return null;
+    }
+
+    @Override
+    public Collection<User> getAllUsers() {
+        return null;
+    }
+
+    /*@Autowired
     private UserRepository userRepository;
 
     @Override
@@ -48,5 +77,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public Collection<User> getAllUsers() {
         return null;
-    }
+    }*/
+
 }
