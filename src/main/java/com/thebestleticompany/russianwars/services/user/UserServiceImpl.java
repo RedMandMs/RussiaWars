@@ -14,37 +14,8 @@ import java.util.Optional;
  */
 @Service
 public class UserServiceImpl implements UserService {
-    @Override
-    public Optional<User> findUserById(long id) {
-        return null;
-    }
 
-    @Override
-    public User create(User user) {
-        return null;
-    }
-
-    @Override
-    public User edit(User user) {
-        return null;
-    }
-
-    @Override
-    public void delete(Long id) {
-
-    }
-
-    @Override
-    public Optional<User> getUserByLogonName(String logonName) {
-        return null;
-    }
-
-    @Override
-    public Collection<User> getAllUsers() {
-        return null;
-    }
-
-    /*@Autowired
+    @Autowired
     private UserRepository userRepository;
 
     @Override
@@ -77,6 +48,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public Collection<User> getAllUsers() {
         return null;
-    }*/
+    }
 
 }

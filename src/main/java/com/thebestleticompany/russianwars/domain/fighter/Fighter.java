@@ -3,7 +3,15 @@ package com.thebestleticompany.russianwars.domain.fighter;
 import com.thebestleticompany.russianwars.domain.kingdom.Kingdom;
 import com.thebestleticompany.russianwars.domain.soldiers.Soldier;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import java.util.List;
 
 /**

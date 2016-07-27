@@ -1,7 +1,7 @@
 package com.thebestleticompany.russianwars.domain.slaves;
 
-import com.thebestleticompany.russianwars.domain.province.Province;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -10,5 +10,4 @@ import java.util.List;
  */
 public interface SlaveRepository extends JpaRepository<Slave, Long> {
 
-    List<Slave> findAllByMaxSlaves (Long maxSlaves);
 }
